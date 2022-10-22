@@ -1,4 +1,7 @@
 from random import randint
+
+
+
 from graphic_arts.start_game_banner import run_screensaver
 
 def attack(char_name: str, char_class: str) -> str:
@@ -44,7 +47,7 @@ def start_training(char_name: str, char_class: str) -> str:
           'defence — чтобы блокировать атаку противника или special'
           '— чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
-    cmd: str = None
+    cmd: str = ''
     while cmd != 'skip':
         cmd = input('Введи команду: ')
         if cmd == 'attack':
@@ -80,7 +83,7 @@ def choice_char_class() -> str:
 
 
 def main() -> None:
-        run_screensaver()
+    run_screensaver()
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
     char_name: str = input('...назови себя: ')
